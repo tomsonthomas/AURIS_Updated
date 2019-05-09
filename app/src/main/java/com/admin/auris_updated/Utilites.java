@@ -157,6 +157,7 @@ public class Utilites {
 
             Uri eventsUri = eventsUriBuilder.build();
             Cursor cursor = null;
+
             cursor = context.getContentResolver().query(
                     eventsUri,
                     new String[]{CalendarContract.Instances.CALENDAR_ID, CalendarContract.Instances.TITLE, CalendarContract.Instances.DESCRIPTION, CalendarContract.Instances.BEGIN, CalendarContract.Instances.END, CalendarContract.Instances.EVENT_LOCATION, CalendarContract.Instances.ORIGINAL_ID, CalendarContract.Instances.ORGANIZER, CalendarContract.Instances.OWNER_ACCOUNT},
