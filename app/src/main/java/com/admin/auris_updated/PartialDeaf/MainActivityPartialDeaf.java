@@ -201,10 +201,14 @@ public class MainActivityPartialDeaf extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.caption) {
+            Intent intent = new Intent();
+            intent.setType("video/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(Intent.createChooser(intent,"Select Video"),1);
             // Handle the camera action
-            Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.INTERNAL_CONTENT_URI);
+          /*  Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.INTERNAL_CONTENT_URI);
             i.setType("video/*");
-            startActivityForResult(i, SELECT_VIDEO);
+            startActivityForResult(i, SELECT_VIDEO);*/
         }
        /* else if(id==R.id.amplify){
             Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.INTERNAL_CONTENT_URI);
