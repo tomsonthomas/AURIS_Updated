@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.admin.auris_updated">
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/auris"
+        android:roundIcon="@drawable/auris"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PartialDeaf.MainActivityPartialDeaf"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register"/>
+        <activity android:name=".Login">
+
+        </activity>
+        <activity android:name=".Deaf.VideoList"
+            android:label="Caption it"/>
+        <activity android:name=".Deaf.TexttoSpeech"
+            android:label="Talk for me"/>
+        <activity android:name=".Deaf.SpeechToText"
+            android:label="Hear for me"/>
+        <activity android:name=".Deaf.Add_Reminders"
+            android:label="Add Event/Reminders"/>
+        <activity android:name=".Deaf.Settings"
+            android:label="Settings"/>
+        <activity android:name=".PartialDeaf.AlertDialogueEm"/>
+        <activity android:name=".Deaf.ViewAllReminders"
+            android:label="View Reminders"/>
+        <activity android:name=".MainActivityDeaf"
+            android:label="@string/app_name" android:theme="@style/AppTheme.NoActionBar"/>
+        <service android:name=".Services.EventService"
+            android:enabled="true" android:exported="false"
+            android:process=":EventService"
+            android:stopWithTask="false"
+            tools:ignore="InnerclassSeparator"/>
+        <service android:name=".Services.EmergencyService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":EmergencyService"
+            android:stopWithTask="false"
+            tools:ignore="InnerclassSeparator"/>
+        <service android:name=".Services.AlertService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":AlertService"
+            android:stopWithTask="false"
+            tools:ignore="InnerclassSeparator"/>
+        <!--
+        Declaring broadcast receiver for BOOT_COMPLETED event.
+       -->
+        <receiver android:name=".Receiver.AlarmReciever"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.ALARM"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.EventReceiver"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.EVENT_REMINDER"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.Emergencyreceiver" tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.EVENT_EMEGENCY"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settings">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:padding="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="5dp"
+            android:id="@+id/remiderlist">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/remider"/>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/kameron"
+                    android:gravity="center"
+                    android:text="View All Reminders"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+       <android.support.v7.widget.CardView
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:elevation="10dp"
+           app:cardCornerRadius="15dp"
+           app:contentPadding="5dp"
+           android:id="@+id/device"
+           >
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <android.support.v7.widget.AppCompatImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="120dp"
+                   android:src="@drawable/implant_device"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/kameron"
+                   android:layout_gravity="center_vertical"
+
+                   android:gravity="center"
+                   android:text="View Device Details"
+                   android:textColor="@color/colorBlack"
+                   android:textSize="20dp" />
+           </LinearLayout>
+
+       </android.support.v7.widget.CardView>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="5dp"
+        android:id="@+id/notify">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:id="@+id/img"
+                android:src="@drawable/turnon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:id="@+id/text"
+                android:fontFamily="@font/kameron"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:text="Turn On \n message notification"/>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="5dp"
+        android:id="@+id/notifyno"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:src="@drawable/emergency"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/kameron"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:text="Add Emergency Phone Number"/>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="5dp"
+        android:id="@+id/usertype"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:src="@drawable/multy_user"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/kameron"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:text="Change user type"/>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

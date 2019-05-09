@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/caption"
+            android:title="Caption it" />
+        <item
+            android:id="@+id/talk"
+            android:title="Talk for me " />
+        <item
+            android:id="@+id/hear"
+
+            android:title="Hear for me" />
+
+        <item
+            android:id="@+id/around"
+
+            android:title="Add Event/Reminders" />
+        <item
+            android:id="@+id/Setting"
+            android:title="Settings" />
+        <item
+            android:id="@+id/logout"
+            android:title="Sign Out" />
+    </group>
+</menu>
