@@ -29,7 +29,7 @@ public class Utilites {
         try {
 
             SharedPreferences sharedPreferences = applicationContext.getSharedPreferences("Auris", MODE_PRIVATE);
-            id = sharedPreferences.getString(value, String.valueOf(""));
+            id = sharedPreferences.getString(value, String.valueOf(" "));
 
         } catch (Exception e) {
             e.printStackTrace();
