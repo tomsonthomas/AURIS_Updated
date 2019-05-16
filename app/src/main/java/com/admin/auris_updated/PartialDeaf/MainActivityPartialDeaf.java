@@ -219,11 +219,12 @@ public class MainActivityPartialDeaf extends AppCompatActivity
             i.setType("video/*");
             startActivityForResult(i, SELECT_VIDEO);*/
         }
-       /* else if(id==R.id.amplify){
-            Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.INTERNAL_CONTENT_URI);
-            i.setType("video/*");
-            startActivityForResult(i, SELECT_VIDEO);
-        }*/
+        else if(id==R.id.amplify){
+            Intent intent = new Intent();
+            intent.setType("video/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(Intent.createChooser(intent,"Select Video"),1);
+        }
             else if (id == R.id.talk) {
             Intent intent = new Intent(getApplicationContext(), TexttoSpeech.class);
             startActivity(intent);

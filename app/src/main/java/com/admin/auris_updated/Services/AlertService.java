@@ -27,7 +27,7 @@ public class AlertService  extends Service {
         super.onCreate();
         try {
             int delay = 2000;   // delay for 2 sec.
-            int period = 60*1000;  // repeat every 3 sec.
+            int period = 30*1000;  // repeat every 3 sec.
             Timer timer = new Timer();
             AlarmReciever receiver = new AlarmReciever();
             IntentFilter intentFilter = new IntentFilter("android.intent.action.ALARM");

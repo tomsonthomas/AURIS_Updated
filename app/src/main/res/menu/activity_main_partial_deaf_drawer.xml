@@ -7,9 +7,9 @@
         <item
             android:id="@+id/caption"
             android:title="Caption it" />
-      <!--  <item
+       <item
             android:id="@+id/amplify"
-            android:title="Amplify it " />-->
+            android:title="Amplify it " />
         <item
             android:id="@+id/talk"
             android:title="Talk for me " />
